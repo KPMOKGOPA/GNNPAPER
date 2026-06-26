@@ -44,9 +44,27 @@ def evaluate_model(model, loader, device='cpu'):
 
 
 if __name__ == '__main__':
-    # Example usage:
-    # model = ...
-    # val_loader = ...
-    # preds, labels, probs, u_features = evaluate_model(model, val_loader)
+    model = ReactionGNN(
+        in_channels=11,
+        hidden_channels=64,
+        global_dim=0
+        )    
+
+    history = train_model(
+        model,
+        train_loader,
+        val_loader,
+        epochs=30,
+        lr=1e-3,
+        device=device
+        )
+
+    train_metrics = evaluate_model(
+        model,
+        train_loader,
+        device=device
+        )
+
+    preds, labels, probs, u_features = evaluate_model(model, val_loader)
     pass
 
