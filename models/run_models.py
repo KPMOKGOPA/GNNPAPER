@@ -35,7 +35,6 @@ def main(df_main):
 
 
 if __name__ == '__main__':
-    # TODO: load or define `df_main` as a pandas DataFrame before running.
     df_main = None
     if df_main is None:
         raise RuntimeError("Please define `df_main` as a pandas DataFrame before running run_models.py")
