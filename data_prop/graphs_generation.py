@@ -2,8 +2,6 @@
 import torch
 from torch_geometric.data import Data, Dataset
 import numpy as np
-
-
 covalent_radii = {
     1: 0.31, 6: 0.76, 8: 0.66, 7: 0.71,
     16: 1.05, 9: 0.57, 17: 1.02, 35: 1.20
